@@ -1,0 +1,16 @@
+.TagItem__a{
+  background: gray;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
+  align-content: center;
+  text-align: center;
+  color: white;
+  font-size: small;
+}
+
+.TagItem__a:hover {
+  background: rgb(100,100,100);
+}
