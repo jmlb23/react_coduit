@@ -1,7 +1,6 @@
-import { stringify } from "querystring";
 import { Article, ArticleFeed, ArticlesFeed } from "./ArticleDTOS";
 import { Comment } from "./CommentDTOS";
-import { construct, Errors, isErrors, isOther } from "./Error";
+import { construct, Errors, isOther } from "./Error";
 import { Profile } from "./ProfileDTOS";
 import { Login, Register, User, UserUpdate } from "./UserDTOS";
 
@@ -19,7 +18,7 @@ interface Api {
 
   //Article
   feed(token: string): Promise<ArticlesFeed | Errors>
-  getArticles(page: number): Promise<ArticlesFeed | Errors>
+  getArticles(page: number, tag?: string): Promise<ArticlesFeed | Errors>
   createArticle(token: string, article: Article): Promise<ArticlesFeed | Errors>
   getArticle(slug: string): Promise<ArticleFeed | Errors>
   updateArticle(token: string, slug: string, article: Article): Promise<ArticleFeed | Errors>
@@ -87,9 +86,9 @@ class ApiImpl implements Api {
       .then(this.middleware)
       .then(x => isOther(x) ? x.json() : x);
   }
-  getArticles(page: number): Promise<Errors | ArticlesFeed> {
+  getArticles(page: number, tag?: string): Promise<Errors | ArticlesFeed> {
 
-    return fetch(this.url("articles") + "?" + `limit=20&offset=${page * 20}`, { method: "get", headers: { "Content-Type": "application/json" } })
+    return fetch(`${this.url("articles")}?limit=20&offset=${page * 20}${tag !== undefined ? `&tag=${tag}` : ``}`, { method: "get", headers: { "Content-Type": "application/json" } })
       .then(this.middleware)
       .then(x => isOther(x) ? x.json() : x);
   }

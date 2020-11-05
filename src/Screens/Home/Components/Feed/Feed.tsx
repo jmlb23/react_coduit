@@ -1,6 +1,5 @@
 import React from "react";
-import { ArticleFeed, ArticlesFeed } from "../../../../data/ArticleDTOS";
-import { FeedItem } from "./FeedItem/FeedItem";
+import { ArticlesFeed } from "../../../../data/ArticleDTOS";
 import "./Feed.css";
 import { FeedList } from "./FeedList/FeedList";
 

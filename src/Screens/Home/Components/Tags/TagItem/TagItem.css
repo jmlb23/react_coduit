@@ -1,4 +1,4 @@
-.TagItem__a{
+.TagItem__span{
   background: gray;
   padding-right: 12px;
   padding-left: 12px;
@@ -11,6 +11,7 @@
   font-size: small;
 }
 
-.TagItem__a:hover {
+.TagItem__span:hover {
   background: rgb(100,100,100);
+  cursor: pointer;
 }

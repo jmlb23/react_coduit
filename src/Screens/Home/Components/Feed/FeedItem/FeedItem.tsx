@@ -11,7 +11,7 @@ export const FeedItem = (props: FeedItemProps) =>
   <section className="FeedItem__section">
     <header className="FeedItem__header">
       <Link to={`/profiles/${props.feed.author.username}`}>
-        <img className="FeedItem__img" src={props.feed.author.image} />
+        <img alt={props.feed.title} className="FeedItem__img" src={props.feed.author.image} />
       </Link>
       <div>
         <Link to={`/profiles/${props.feed.author.username}`}>{props.feed.author.username}</Link>

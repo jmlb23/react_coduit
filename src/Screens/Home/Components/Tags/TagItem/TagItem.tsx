@@ -3,9 +3,10 @@ import "./TagItem.css";
 
 type TagItemProps = {
   tag: string
+  onTagSelected: (n: string) => void
 }
 
 export const TagItem = (props: TagItemProps) =>
   <>
-    <a className="TagItem__a">{props.tag}</a>
+    <span onClick={_ => props.onTagSelected(props.tag)} className="TagItem__span">{props.tag}</span>
   </>
