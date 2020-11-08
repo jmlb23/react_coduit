@@ -1,4 +1,6 @@
-.Home__div-parent{
+.Home__div-parent {
   display: flex;
   padding: 20px;
+  padding-left: 20%;
+  padding-right: 20%;
 }
