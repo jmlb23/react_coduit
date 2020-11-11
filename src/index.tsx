@@ -8,6 +8,7 @@ import { Footer } from './Screens/Common/Footer/Footer';
 import { Header } from './Screens/Common/Header/Header';
 import { Home } from './Screens/Home/Home';
 import { Login } from './Screens/Login/Login';
+import { NotFound } from './Screens/NotFound/NotFound';
 import { Signup } from './Screens/Signup/Signup';
 import { AppStore } from './State/Store';
 
@@ -17,14 +18,17 @@ ReactDOM.render(
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/signin">
+          <Route exact path="/signin">
             <Login />
           </Route>
-          <Route path="/signup">
+          <Route exact path="/signup">
             <Signup />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
         <Footer />
