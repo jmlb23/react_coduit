@@ -3,6 +3,7 @@ import { ArticleFeed } from "../../../../../data/ArticleDTOS";
 import { Link } from "react-router-dom";
 import "./FeedItem.css";
 
+
 type FeedItemProps = {
   feed: ArticleFeed
 };

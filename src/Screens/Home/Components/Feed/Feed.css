@@ -14,5 +14,14 @@
 .Feed__page{
   display: inline-block;
   padding: 5px;
+  border: 1px solid rgb(10, 205, 10);
+  background-color:  rgba(40, 255, 40,0.1);
+  margin: 5px;
+  border-radius: 3px;
 
+}
+
+.Feed__page:hover{
+  background-color:  rgba(40, 255, 40,0.5);
+  cursor: pointer;
 }

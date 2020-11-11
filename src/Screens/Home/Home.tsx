@@ -16,12 +16,20 @@ export const Home = () => {
 
 
   useEffect(() => {
-    apiClient.getArticles(page, tagSelected).then(x => isOther(x) ? x : { articles: [], articlesCount: 0 }).then(setArticles)
+    let isMounted = true
+    apiClient.getArticles(page, tagSelected).then(x => isOther(x) ? x : { articles: [], articlesCount: 0 }).then(x => isMounted ? setArticles(x) : null)
+    return (() => {
+      isMounted = false
+    })
   }, [page, tagSelected])
 
 
   useEffect(() => {
-    apiClient.getTags().then(x => isOther(x) ? x : []).then(setTags)
+    let isMounted = true
+    apiClient.getTags().then(x => isOther(x) ? x : []).then(x => isMounted ? setTags(x) : null)
+    return (() => {
+      isMounted = false
+    })
   }, [])
 
   return <div className="Home__div-parent">
