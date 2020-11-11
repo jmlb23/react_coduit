@@ -1,4 +1,4 @@
-class Login {
+class LoginDTO {
   constructor(public email: string, public password: string) { }
 }
 
@@ -18,5 +18,5 @@ class UserUpdate {
 
 
 export {
-  Login, User, Register, UserUpdate
+  LoginDTO, User, Register, UserUpdate
 }

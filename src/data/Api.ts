@@ -2,7 +2,7 @@ import { Article, ArticleFeed, ArticlesFeed } from "./ArticleDTOS";
 import { Comment } from "./CommentDTOS";
 import { construct, Errors, isOther } from "./Error";
 import { Profile } from "./ProfileDTOS";
-import { Login, Register, User, UserUpdate } from "./UserDTOS";
+import { LoginDTO as Login, Register, User, UserUpdate } from "./UserDTOS";
 
 interface Api {
   //USER
