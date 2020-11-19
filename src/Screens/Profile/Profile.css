@@ -1,0 +1,8 @@
+.UserProfile__img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  margin-left: calc(50% - 100px);
+  margin-right: calc(50% - 100px);
+  margin-top: 50px;
+}

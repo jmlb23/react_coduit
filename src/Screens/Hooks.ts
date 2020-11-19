@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-export function useStorage<T>(key: string): [T | undefined, (t: T | undefined) => void] {
-  const [value, setValue] = useState<T>();
+export function useStorage<T>(key: string): [T | null, (t: T | null) => void] {
+  const [value, setValue] = useState<T | null>(null);
 
   return [value
     , (x) => {

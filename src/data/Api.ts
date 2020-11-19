@@ -66,9 +66,12 @@ class ApiImpl implements Api {
 
   }
   getProfile(username: string, token?: string): Promise<Errors | Profile> {
-    return fetch(this.url("profiles", username), { method: "get", headers: { "Content-Type": "application/json", "Authorization": `Token ${token}` } })
+    const headers: Record<string, string> = token !== undefined ?
+      { "Content-Type": "application/json", "Authorization": `Token ${token}` }
+      : { "Content-Type": "application/json" };
+    return window.fetch(this.url("profiles", username), { method: "get", headers: { ...headers } })
       .then(this.middleware)
-      .then(x => isOther(x) ? x.json().then(x => ({ profile: x }.profile)) : x);
+      .then(x => isOther(x) ? x.json().then(x => x.profile) : x);
   }
 
   follow(token: string, username: string): Promise<Errors | Profile> {
