@@ -33,11 +33,13 @@ export function Signup(props: SignupProps): JSX.Element {
     <div className="Signup__container">
       <h1>Sign up</h1>
       <Link to="/signin">Have an account?</Link>
-      <input type="text" placeholder="Username" onInput={data => setUsername((data.target as HTMLInputElement).value)} />
-      <input type="text" placeholder="Email" onInput={data => setEmail((data.target as HTMLInputElement).value)} />
-      <input type="password" placeholder="Password" onInput={data => setPassword((data.target as HTMLInputElement).value)} />
-      <input type="password" placeholder="Repeat Password" onInput={data => setConfirmPassword((data.target as HTMLInputElement).value)} />
-      <button onClick={(_) => setSubmited([username, email, password, confirmPassword])}>Sign up</button>
+      <div className="Signup__div">
+        <input type="text" placeholder="Username" onInput={data => setUsername((data.target as HTMLInputElement).value)} />
+        <input type="text" placeholder="Email" onInput={data => setEmail((data.target as HTMLInputElement).value)} />
+        <input type="password" placeholder="Password" onInput={data => setPassword((data.target as HTMLInputElement).value)} />
+        <input type="password" placeholder="Repeat Password" onInput={data => setConfirmPassword((data.target as HTMLInputElement).value)} />
+        <button onClick={(_) => setSubmited([username, email, password, confirmPassword])}>Sign up</button>
+      </div>
     </div>
   );
 }

@@ -18,7 +18,7 @@ interface Api {
 
   //Article
   feed(token: string): Promise<ArticlesFeed | Errors>
-  getArticles(page: number, tag?: string): Promise<ArticlesFeed | Errors>
+  getArticles(page: number, tag?: string, favorited?: string, author?: string): Promise<ArticlesFeed | Errors>
   createArticle(token: string, article: Article): Promise<ArticlesFeed | Errors>
   getArticle(slug: string): Promise<ArticleFeed | Errors>
   updateArticle(token: string, slug: string, article: Article): Promise<ArticleFeed | Errors>
@@ -89,9 +89,9 @@ class ApiImpl implements Api {
       .then(this.middleware)
       .then(x => isOther(x) ? x.json() : x);
   }
-  getArticles(page: number, tag?: string): Promise<Errors | ArticlesFeed> {
+  getArticles(page: number, tag?: string, favorited?: string, author?: string): Promise<Errors | ArticlesFeed> {
 
-    return fetch(`${this.url("articles")}?limit=20&offset=${page * 20}${tag !== undefined ? `&tag=${tag}` : ``}`, { method: "get", headers: { "Content-Type": "application/json" } })
+    return fetch(`${this.url("articles")}?limit=20&offset=${page * 20}${tag !== undefined ? `&tag=${tag}` : ``}${favorited !== undefined ? `&favorited=${favorited}` : ``}${author !== undefined ? `&author=${author}` : ``}`, { method: "get", headers: { "Content-Type": "application/json" } })
       .then(this.middleware)
       .then(x => isOther(x) ? x.json() : x);
   }

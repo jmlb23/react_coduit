@@ -1,13 +1,11 @@
-.Login__container {
-  position: relative;
-  height: 100%;
-  width: 100%;
+.Login__container > *{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.Login__container>* {
-  display: block;
-  margin: 10px;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
+.Login__form{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }

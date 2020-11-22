@@ -6,12 +6,12 @@ import { isOther } from "../../data/Error";
 import { Profile } from "../../data/ProfileDTOS";
 import { AppActions } from "../../State/ActionCreators";
 import { AppState } from "../../State/Reducers";
-import { FeedList } from "../Home/Components/Feed/FeedList/FeedList";
+import { ProfileFeed } from "./Components/ProfileFeed/ProfileFeed";
 import "./Profile.css";
 
 
 type ProfileProps = {
-
+  showFavs: boolean
 };
 
 export const UserProfile = (props: ProfileProps) => {
@@ -36,16 +36,18 @@ export const UserProfile = (props: ProfileProps) => {
 
   }, [token, id, store]);
 
-  return <>
-    <div>
-      <img className="UserProfile__img" src={profile?.image} alt="profile" />
-      <p>{profile?.username}</p>
-      <span>
-        <img alt="plus" />
-        <span>follow</span>
-        <span>{profile?.username}</span>
-      </span>
+  return (
+    <div className="UserProfile">
+      <header>
+        <img className="UserProfile__img" src={profile?.image} alt="profile" />
+        <p className="UserProfile__username">{profile?.username}</p>
+        <span className="UserProfile__follow">
+          <img alt="plus" />
+          <span>follow</span>
+          <span>{profile?.username}</span>
+        </span>
+      </header>
+      <ProfileFeed isFavFeed={props.showFavs} username={profile?.username} />
     </div>
-    <FeedList articles={[]} />
-  </>;
+  );
 }

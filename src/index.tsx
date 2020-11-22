@@ -19,8 +19,11 @@ ReactDOM.render(
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/profiles/:id">
-            <UserProfile />
+          <Route path="/profiles/:id/favorites">
+            <UserProfile showFavs={true} />
+          </Route>
+          <Route exact path="/profiles/:id">
+            <UserProfile showFavs={false} />
           </Route>
           <Route exact path="/signin">
             <Login />
@@ -39,8 +42,7 @@ ReactDOM.render(
       </BrowserRouter>
     </React.StrictMode>
   </Provider>
-  ,
-  document.getElementById('root')
+  , document.getElementById("root")
 );
 
 reportWebVitals();

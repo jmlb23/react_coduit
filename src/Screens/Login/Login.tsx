@@ -30,11 +30,13 @@ export function Login(props: LoginProps): JSX.Element {
 
   return (
     <div className="Login__container">
-      <h1>Sign in</h1>
-      <Link to="/signup">Need an account?</Link>
-      <input type="text" placeholder="Email" onInput={data => setEmailI((data.target as HTMLInputElement).value)} />
-      <input type="password" placeholder="Password" onInput={x => setPasswordI((x.target as HTMLInputElement).value)} />
-      <button onClick={_ => setSubmited([emailI, passwordI])}>Sign in</button>
+      <h1 className="Login_h1">Sign in</h1>
+      <Link className="Login_link" to="/signup">Need an account?</Link>
+      <div className="Login__form">
+        <input className="Login_form__input" type="text" placeholder="Email" onInput={data => setEmailI((data.target as HTMLInputElement).value)} />
+        <input className="Login_form__input" type="password" placeholder="Password" onInput={x => setPasswordI((x.target as HTMLInputElement).value)} />
+        <button onClick={_ => setSubmited([emailI, passwordI])}>Sign in</button>
+      </div>
     </div>
   );
 }

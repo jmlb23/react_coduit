@@ -1,13 +1,14 @@
-.Signup__container {
-  position: relative;
-  height: 100%;
-  width: 100%;
+.Signup__container > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.Signup__container>* {
-  display: block;
-  margin: 10px;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
+.Signup__div{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
+
+
