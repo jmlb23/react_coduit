@@ -1,0 +1,55 @@
+.UserPresence {
+  display: flex;
+}
+
+.UserPresence__footer>* {
+  margin: 5px;
+}
+
+.UserPresence__header {
+  display: flex;
+}
+
+.UserPresence__avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+.UserPresence__follow {
+  padding: 5px;
+  background-color: transparent;
+  border-color: #5CB85C;
+  border-radius: 5px;
+  color: #5CB85C;
+}
+
+.UserPresence__follow:hover {
+  background-color: #5CB85C;
+  color: white;
+}
+
+.UserPresence__favorite {
+  padding: 5px;
+  background-color: transparent;
+  border-color: #ccc;
+  border-radius: 5px;
+  color: #ccc;
+}
+
+.UserPresence__favorite:hover {
+  background-color: #ccc;
+  color: white;
+}
+
+.UserPresence__username {
+  font-size: 15px;
+  margin: 5px;
+  padding: 0;
+}
+
+.UserPresence__date {
+  font-size: 15px;
+  margin: 5px;
+  padding: 0;
+}

@@ -4,14 +4,15 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Footer } from './Screens/Common/Footer/Footer';
-import { Header } from './Screens/Common/Header/Header';
+import { Footer } from './Common/Footer/Footer';
+import { Header } from './Common/Header/Header';
 import { Home } from './Screens/Home/Home';
 import { Login } from './Screens/Login/Login';
 import { NotFound } from './Screens/NotFound/NotFound';
 import { UserProfile } from './Screens/Profile/Profile';
 import { Signup } from './Screens/Signup/Signup';
 import { AppStore } from './State/Store';
+import { Article } from './Screens/Article/Article';
 
 ReactDOM.render(
   <Provider store={AppStore}>
@@ -19,6 +20,9 @@ ReactDOM.render(
       <BrowserRouter>
         <Header />
         <Switch>
+          <Route path="/articles/:id">
+            <Article />
+          </Route>
           <Route path="/profiles/:id/favorites">
             <UserProfile showFavs={true} />
           </Route>
@@ -38,7 +42,7 @@ ReactDOM.render(
             <NotFound />
           </Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </React.StrictMode>
   </Provider>

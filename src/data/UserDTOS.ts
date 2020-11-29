@@ -1,22 +1,28 @@
-class LoginDTO {
-  constructor(public email: string, public password: string) { }
+export type LoginDTO = {
+  email: string;
+  password: string
 }
 
-class User {
-  constructor(public id: number, public email: string, public createdAt: string, public updatedAt: string,
-    public username: string, public bio: string | null, public image: string | null, public token: string) { }
+export type User = {
+  id: number;
+  email: string;
+  createdAt: string;
+  updatedAt: string;
+  username: string;
+  bio: string | null;
+  image: string | null;
+  token: string;
 }
 
-class Register {
-  constructor(public username: string, public email: string, public password: string) { }
+export type Register = {
+  username: string;
+  email: string;
+  password: string;
 }
 
-class UserUpdate {
-  constructor(public email: string,
-    public username: string, public bio: string, public image: string) { }
-}
-
-
-export {
-  LoginDTO, User, Register, UserUpdate
+export type UserUpdate = {
+  email: string;
+  username: string;
+  bio: string;
+  image: string;
 }

@@ -1,0 +1,33 @@
+.Article__header {
+  background-color: #333;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.Article__footer {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.Article__footer__UserPresence {
+  justify-content: center;
+}
+
+.Article__tags {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.Article__tags__item {
+  border: 1px solid #aaa;
+  color: #aaa;
+  border-radius: 20px;
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 12px;
+}

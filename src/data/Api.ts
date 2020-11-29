@@ -103,7 +103,7 @@ class ApiImpl implements Api {
   getArticle(slug: string): Promise<Errors | ArticleFeed> {
     return fetch(this.url("articles", slug), { method: "get", headers: { "Content-Type": "application/json" } })
       .then(this.middleware)
-      .then(x => isOther(x) ? x.json() : x);
+      .then(x => isOther(x) ? x.json().then(x => x.article) : x);
   }
   updateArticle(token: string, slug: string, article: Article): Promise<Errors | ArticleFeed> {
     return fetch(this.url("articles", slug), { method: "put", headers: { "Content-Type": "application/json", "Authorization": `Token ${token}` }, body: JSON.stringify({ article: article }) })

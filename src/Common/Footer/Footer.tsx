@@ -3,5 +3,5 @@ import "./Footer.css"
 
 export const Footer = () =>
   <footer className="Footer__footer">
-    {new Date().getFullYear()}
+    {new Date().getFullYear()} ©
   </footer>

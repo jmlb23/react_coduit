@@ -1,10 +1,10 @@
 import { Profile } from "./ProfileDTOS";
 
-export class Comment {
-  constructor(public id: number, public createdAt: string,
-    public updatedAt: string, public body: string,
-    public author: Profile) {
-
-  }
+export type Comment = {
+  id: number;
+  createdAt: string;
+  updatedAt: string;
+  body: string;
+  author: Profile;
 }
 

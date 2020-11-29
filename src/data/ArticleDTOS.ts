@@ -1,24 +1,29 @@
 import { Profile } from "./ProfileDTOS";
 
-class ArticleFeed {
-  constructor(public slug: string, public title: string,
-    public description: string, public body: string,
-    public tagList: string[], public createdAt: string,
-    public updatedAt: string, public favorited: boolean,
-    public favoritesCount: number, public author: Profile) {
-  }
+type ArticleFeed = {
+  title: string;
+  slug: string;
+  body: string;
+  createdAt: string;
+  updatedAt: string;
+  tagList: string[];
+  description: string;
+  author: Profile;
+  favorited: boolean;
+  favoritesCount: number;
 }
 
-class ArticlesFeed {
-  constructor(public articles: ArticleFeed[], public articlesCount: number) { }
+type ArticlesFeed = {
+  articles: ArticleFeed[];
+  articlesCount: number;
 }
 
 
-class Article {
-  constructor(public title: string,
-    public description: string, public body: string,
-    public tagList?: string[]) {
-  }
+type Article = {
+  title: string;
+  description: string;
+  body: string
+  tagList?: string[];
 }
 
-export { ArticlesFeed, Article, ArticleFeed }
+export type { ArticlesFeed, Article, ArticleFeed };

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useStore } from "react-redux";
 import { Link } from "react-router-dom";
-import { AppActions } from "../../../State/ActionCreators";
-import { AppState } from "../../../State/Reducers";
+import { AppActions } from "../../State/ActionCreators";
+import { AppState } from "../../State/Reducers";
 import "./Header.css"
 
 export const Header = () => {
@@ -16,7 +16,7 @@ export const Header = () => {
   })
 
   return <header className="Header__header">
-    <img />
+    <img className="Header__logo" src={process.env.PUBLIC_URL + '/favicon.ico'} />
     <nav className="Header__nav">
       <Link className="Header__Link" to="/">Home</Link>
       {

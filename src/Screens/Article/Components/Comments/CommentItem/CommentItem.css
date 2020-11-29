@@ -1,0 +1,28 @@
+.CommentItem__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.CommentItem__footer {
+  padding: 15px;
+  background-color: #dfdfdf;
+  justify-content: center;
+  border-top: 1px solid #d1d1d1;
+}
+
+.CommentItem__footer__item {
+  margin-left: 10px;
+  padding: 0;
+}
+
+.CommentItem__content {
+  padding: 30px;
+}
+
+.CommentItem__container {
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

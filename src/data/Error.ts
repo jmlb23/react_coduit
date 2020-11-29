@@ -10,7 +10,7 @@ export function isErrors<T>(t: T | Errors): t is Errors {
 }
 
 export function isOther<T>(t: T | Errors): t is T {
-  return !("message" in t)
+  return !("message" in t) || t !== undefined
 }
 
 export function construct(code: number): Errors {

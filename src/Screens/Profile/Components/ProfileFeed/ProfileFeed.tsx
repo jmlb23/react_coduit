@@ -5,12 +5,12 @@ import { isOther } from "../../../../data/Error";
 import { FeedList } from "../../../Home/Components/Feed/FeedList/FeedList";
 
 
-type ProfileFeed = {
+type ProfileFeedProps = {
   isFavFeed: Boolean
   username: string | undefined
 }
 
-export const ProfileFeed = (props: ProfileFeed) => {
+export const ProfileFeed = (props: ProfileFeedProps) => {
   const [isFav, setIsFav] = useState(props.isFavFeed)
   const [articles, setArticles] = useState<ArticleFeed[]>([])
 
