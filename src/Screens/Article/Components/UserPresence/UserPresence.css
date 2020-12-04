@@ -16,19 +16,6 @@
   border-radius: 25px;
 }
 
-.UserPresence__follow {
-  padding: 5px;
-  background-color: transparent;
-  border-color: #5CB85C;
-  border-radius: 5px;
-  color: #5CB85C;
-}
-
-.UserPresence__follow:hover {
-  background-color: #5CB85C;
-  color: white;
-}
-
 .UserPresence__favorite {
   padding: 5px;
   background-color: transparent;

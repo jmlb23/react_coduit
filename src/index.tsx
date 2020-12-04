@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Footer } from './Common/Footer/Footer';
+// import { Footer } from './Common/Footer/Footer';
 import { Header } from './Common/Header/Header';
 import { Home } from './Screens/Home/Home';
 import { Login } from './Screens/Login/Login';

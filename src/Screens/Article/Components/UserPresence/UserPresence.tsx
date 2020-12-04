@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArticleFeed } from "../../../../data/ArticleDTOS";
 import "./UserPresence.css"
 import "../../../../Common/Extensions";
+import { Follow } from "../Comments/Follow/Follow";
 
 
 type UserPresenceProps = {
@@ -21,6 +22,6 @@ export const UserPresence = ({ article, className }: UserPresenceProps) =>
     </header>
     <footer className="UserPresence__footer">
       <button className="UserPresence__favorite"><span>&hearts;</span> favorite article ({article?.favoritesCount})</button>
-      <button className="UserPresence__follow"><span className="UserPresence__follow__icon">+</span> follow {article?.author.username}</button>
+      <Follow username={article?.author.username} />
     </footer>
   </div>

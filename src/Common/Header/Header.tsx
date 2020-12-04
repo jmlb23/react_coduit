@@ -16,7 +16,7 @@ export const Header = () => {
   })
 
   return <header className="Header__header">
-    <img className="Header__logo" src={process.env.PUBLIC_URL + '/favicon.ico'} />
+    <Link className="Header__logo__link" to="/"><img className="Header__logo" src={process.env.PUBLIC_URL + '/favicon.ico'} /></Link>
     <nav className="Header__nav">
       <Link className="Header__Link" to="/">Home</Link>
       {

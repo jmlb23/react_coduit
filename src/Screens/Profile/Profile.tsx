@@ -6,6 +6,7 @@ import { isOther } from "../../data/Error";
 import { Profile } from "../../data/ProfileDTOS";
 import { AppActions } from "../../State/ActionCreators";
 import { AppState } from "../../State/Reducers";
+import { Follow } from "../Article/Components/Comments/Follow/Follow";
 import { ProfileFeed } from "./Components/ProfileFeed/ProfileFeed";
 import "./Profile.css";
 
@@ -38,14 +39,12 @@ export const UserProfile = (props: ProfileProps) => {
 
   return (
     <div className="UserProfile">
-      <header>
+      <header className="UserProfile__header">
         <img className="UserProfile__img" src={profile?.image} alt="profile" />
         <p className="UserProfile__username">{profile?.username}</p>
-        <span className="UserProfile__follow">
-          <img alt="plus" />
-          <span>follow</span>
-          <span>{profile?.username}</span>
-        </span>
+        <div className="UserProfile__follow-align">
+          <Follow username={profile?.username} />
+        </div>
       </header>
       <ProfileFeed isFavFeed={props.showFavs} username={profile?.username} />
     </div>

@@ -1,21 +1,20 @@
-.UserProfile{
+.UserProfile {
   height: 100%;
 }
 
 .UserProfile__img {
   height: 200px;
   width: 200px;
-  border-radius: 100px;
+  border-radius: 50%;
   margin-left: calc(50% - 100px);
   margin-right: calc(50% - 100px);
   margin-top: 50px;
-  border: 1px solid black;
-  padding: 2px;
-  background-color: brown;
+  border: 2px solid black;
+  padding: 5px;
 }
 
 
-.UserProfile__username{
+.UserProfile__username {
   width: 200px;
   text-align: center;
   margin-left: calc(50% - 100px);
@@ -24,20 +23,30 @@
 
 }
 
-.UserProfile__follow{
+.UserProfile__follow {
   border: 1px solid black;
   border-radius: 5px;
   padding: 2px;
 }
 
-.UserProfile__feed-selector{
+.UserProfile__feed-selector {
   border-bottom: 1px solid gray;
   list-style: none;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-.UserProfile__feed-selector > li{
+.UserProfile__feed-selector>li {
   display: inline-block;
   margin: 5px;
+}
+
+.UserProfile__header {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.UserProfile__follow-align {
+  display: flex;
+  justify-content: flex-end;
 }

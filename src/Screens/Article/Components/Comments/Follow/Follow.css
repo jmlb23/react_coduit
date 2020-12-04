@@ -1,0 +1,12 @@
+.Follow__button {
+  padding: 5px;
+  background-color: transparent;
+  border-color: #5CB85C;
+  border-radius: 5px;
+  color: #5CB85C;
+}
+
+.Follow__button:hover {
+  background-color: #5CB85C;
+  color: white;
+}
