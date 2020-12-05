@@ -16,19 +16,6 @@
   border-radius: 25px;
 }
 
-.UserPresence__favorite {
-  padding: 5px;
-  background-color: transparent;
-  border-color: var(--accent-color);
-  border-radius: 5px;
-  color: var(--accent-color);
-}
-
-.UserPresence__favorite:hover {
-  background-color: var(--accent-color);
-  color: white;
-}
-
 .UserPresence__username {
   font-size: 15px;
   margin: 5px;

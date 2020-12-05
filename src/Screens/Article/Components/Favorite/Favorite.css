@@ -1,0 +1,12 @@
+.Favorite__favorite {
+  padding: 5px;
+  background-color: transparent;
+  border-color: var(--accent-color);
+  border-radius: 5px;
+  color: var(--accent-color);
+}
+
+.Favorite__favorite:hover {
+  background-color: var(--accent-color);
+  color: white;
+}

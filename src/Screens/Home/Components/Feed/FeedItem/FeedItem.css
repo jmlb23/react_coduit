@@ -14,9 +14,31 @@
 }
 
 .FeedItem__User {
-  margin-top: 0;
-  display: inline-block;
-  margin-left: 10px;
   margin-top: auto;
   margin-bottom: auto;
+  display: flex;
+  margin-left: 10px;
+  flex-direction: row;
+  flex: 1 0 auto;
+}
+
+.FeedItem__img-inline {
+  display: flex;
+}
+
+.FeedItem__header {
+  display: flex;
+}
+
+.FeedItem__fav {
+  margin-right: 0;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+.FeedItem__creation {
+  margin-bottom: 0;
 }

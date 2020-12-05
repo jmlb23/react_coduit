@@ -4,6 +4,7 @@ import { ArticleFeed } from "../../../../data/ArticleDTOS";
 import "./UserPresence.css"
 import "../../../../Common/Extensions";
 import { Follow } from "../Comments/Follow/Follow";
+import { Favorite } from "../Favorite/Favorite";
 
 
 type UserPresenceProps = {
@@ -21,7 +22,7 @@ export const UserPresence = ({ article, className }: UserPresenceProps) =>
       </div>
     </header>
     <footer className="UserPresence__footer">
-      <button className="UserPresence__favorite"><span>&hearts;</span> favorite article ({article?.favoritesCount})</button>
       <Follow username={article?.author.username} />
+      <Favorite favCount={article?.favoritesCount} />
     </footer>
   </div>
