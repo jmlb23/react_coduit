@@ -1,27 +1,28 @@
-.Feed__div{
+.Feed__div {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-.Feed__pages{
+.Feed__pages {
   margin-left: auto;
   margin-right: auto;
   list-style: none;
   width: 50%;
 }
 
-.Feed__page{
+.Feed__page {
   display: inline-block;
   padding: 5px;
-  border: 1px solid rgb(10, 205, 10);
-  background-color:  rgba(40, 255, 40,0.1);
+  border: 1px solid var(--primary-color-dark);
+  background-color: var(--primary-color);
   margin: 5px;
+  color: var(--text-color);
   border-radius: 3px;
 
 }
 
-.Feed__page:hover{
-  background-color:  rgba(40, 255, 40,0.5);
+.Feed__page:hover {
+  background-color: var(--primary-color-dark);
   cursor: pointer;
 }

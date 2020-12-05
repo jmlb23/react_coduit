@@ -9,7 +9,7 @@
   margin-left: calc(50% - 100px);
   margin-right: calc(50% - 100px);
   margin-top: 50px;
-  border: 2px solid black;
+  border: 2px solid var(--primary-color-dark);
   padding: 5px;
 }
 
@@ -23,24 +23,6 @@
 
 }
 
-.UserProfile__follow {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 2px;
-}
-
-.UserProfile__feed-selector {
-  border-bottom: 1px solid gray;
-  list-style: none;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.UserProfile__feed-selector>li {
-  display: inline-block;
-  margin: 5px;
-}
-
 .UserProfile__header {
   margin-left: 10%;
   margin-right: 10%;
@@ -49,4 +31,9 @@
 .UserProfile__follow-align {
   display: flex;
   justify-content: flex-end;
+}
+
+.ProfileFeed__separator {
+  margin-left: 10%;
+  margin-right: 10%;
 }

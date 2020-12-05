@@ -1,0 +1,11 @@
+.ProfileFeed__feed-selector {
+  margin-left: 10%;
+  margin-right: 10%;
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.ProfileFeed__feed-selector>li {
+  margin-right: 5px;
+}

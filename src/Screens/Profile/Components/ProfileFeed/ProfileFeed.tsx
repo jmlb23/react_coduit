@@ -3,6 +3,7 @@ import { apiClient } from "../../../../data/Api";
 import { ArticleFeed } from "../../../../data/ArticleDTOS";
 import { isOther } from "../../../../data/Error";
 import { FeedList } from "../../../Home/Components/Feed/FeedList/FeedList";
+import "./ProfileFeed.css";
 
 
 type ProfileFeedProps = {
@@ -27,10 +28,11 @@ export const ProfileFeed = (props: ProfileFeedProps) => {
   }, [isFav, props.username]);
 
   return <footer>
-    <ul className="UserProfile__feed-selector">
+    <ul className="ProfileFeed__feed-selector">
       <li onClick={_ => setIsFav(false)} >My articles</li>
       <li onClick={_ => setIsFav(true)} >Favorited articles</li>
     </ul>
+    <hr className="ProfileFeed__separator" />
     <FeedList articles={articles} />
   </footer>
 }

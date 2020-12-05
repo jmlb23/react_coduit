@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #1976d2;
+  --primary-color-dark: #004ba0;
+  --accent-color: #ffa733;
+  --text-color: #ffffff;
+}
+
 body {
   margin: 0;
   height: 100%;

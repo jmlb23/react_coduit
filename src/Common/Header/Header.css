@@ -7,6 +7,12 @@
 
 .Header__Link {
   padding: 5px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.Header__Link:hover {
+  color: var(--primary-color-dark);
 }
 
 .Header__logo {

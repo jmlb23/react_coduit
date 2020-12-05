@@ -14,7 +14,7 @@ export const FeedItem = (props: FeedItemProps) =>
       <Link to={`/profiles/${props.feed.author.username}`}>
         <img alt={props.feed.title} className="FeedItem__img" src={props.feed.author.image} />
       </Link>
-      <div>
+      <div className="FeedItem__User">
         <Link to={`/profiles/${props.feed.author.username}`}>{props.feed.author.username}</Link>
         <p>{props.feed.createdAt}</p>
       </div>
