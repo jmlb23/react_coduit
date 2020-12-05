@@ -1,0 +1,8 @@
+.Loader__circle {
+  fill: var(--primary-color);
+}
+
+.Loader__svg {
+  display: flex;
+  justify-content: center;
+}

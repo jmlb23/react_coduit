@@ -13,6 +13,7 @@ import { UserProfile } from './Screens/Profile/Profile';
 import { Signup } from './Screens/Signup/Signup';
 import { AppStore } from './State/Store';
 import { Article } from './Screens/Article/Article';
+import { Loader } from './Common/Loader/Loader';
 
 ReactDOM.render(
   <Provider store={AppStore}>
@@ -44,8 +45,8 @@ ReactDOM.render(
         </Switch>
         {/* <Footer /> */}
       </BrowserRouter>
-    </React.StrictMode>
-  </Provider>
+    </React.StrictMode >
+  </Provider >
   , document.getElementById("root")
 );
 

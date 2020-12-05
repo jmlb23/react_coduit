@@ -6,6 +6,28 @@
   padding: 0;
 }
 
-.ProfileFeed__feed-selector>li {
+.ProfileFeed__feed__item {
   margin-right: 5px;
+  border: 2px solid var(--primary-color-dark);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--primary-color-dark);
+  background-color: white;
+  user-select: none;
+}
+
+.ProfileFeed__feed__item:hover {
+  margin-right: 5px;
+  border: 2px solid var(--primary-color-dark);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--text-color);
+  background-color: var(--primary-color-dark);
+  cursor: pointer;
+}
+
+.ProfileFeed__feed__item:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }

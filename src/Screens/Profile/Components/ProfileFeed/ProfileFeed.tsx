@@ -29,8 +29,8 @@ export const ProfileFeed = (props: ProfileFeedProps) => {
 
   return <footer>
     <ul className="ProfileFeed__feed-selector">
-      <li onClick={_ => setIsFav(false)} >My articles</li>
-      <li onClick={_ => setIsFav(true)} >Favorited articles</li>
+      <li className="ProfileFeed__feed__item" onClick={_ => setIsFav(false)} >My articles</li>
+      <li className="ProfileFeed__feed__item" onClick={_ => setIsFav(true)} >Favorited articles</li>
     </ul>
     <hr className="ProfileFeed__separator" />
     <FeedList articles={articles} />

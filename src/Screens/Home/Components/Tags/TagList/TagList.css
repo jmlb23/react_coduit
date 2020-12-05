@@ -2,6 +2,7 @@
   padding: 10px;
   display: flex;
   gap: 2px;
+  height: auto;
   flex-direction: row;
   flex-wrap: wrap;
 }

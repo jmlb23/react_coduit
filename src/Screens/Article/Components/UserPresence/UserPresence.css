@@ -19,13 +19,13 @@
 .UserPresence__favorite {
   padding: 5px;
   background-color: transparent;
-  border-color: #ccc;
+  border-color: var(--accent-color);
   border-radius: 5px;
-  color: #ccc;
+  color: var(--accent-color);
 }
 
 .UserPresence__favorite:hover {
-  background-color: #ccc;
+  background-color: var(--accent-color);
   color: white;
 }
 

@@ -1,11 +1,11 @@
 .Home__div {
   width: 200px;
-  height: 300px;
+  height: fit-content;
   background-color: beige;
   border-radius: 10px;
 }
 
-.Home__p{
+.Home__p {
   margin: 10px;
   color: gray;
 }
