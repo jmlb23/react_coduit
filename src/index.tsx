@@ -13,7 +13,8 @@ import { UserProfile } from './Screens/Profile/Profile';
 import { Signup } from './Screens/Signup/Signup';
 import { AppStore } from './State/Store';
 import { Article } from './Screens/Article/Article';
-import { Loader } from './Common/Loader/Loader';
+import { Editor } from './Screens/Editor/Editor';
+import { UserSettings } from './Screens/UserSettings/UserSettings';
 
 ReactDOM.render(
   <Provider store={AppStore}>
@@ -23,6 +24,12 @@ ReactDOM.render(
         <Switch>
           <Route path="/articles/:id">
             <Article />
+          </Route>
+          <Route path="/editor">
+            <Editor />
+          </Route>
+          <Route path="/settings">
+            <UserSettings />
           </Route>
           <Route path="/profiles/:id/favorites">
             <UserProfile showFavs={true} />

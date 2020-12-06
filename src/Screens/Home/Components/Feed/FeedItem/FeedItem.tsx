@@ -32,5 +32,5 @@ export const FeedItem = (props: FeedItemProps) =>
     <footer>
       <Link to={`/articles/${props.feed.slug}`}>see more</Link>
     </footer>
-    <hr />
+    <hr className="FavItem__separator" />
   </section>

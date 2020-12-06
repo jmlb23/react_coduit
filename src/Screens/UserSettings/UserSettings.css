@@ -1,0 +1,70 @@
+.UserSettings__container {
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.UserSettings__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+.UserSettings__inputs {
+  margin: 20px;
+  padding: 10px;
+}
+
+.UserSettings__inputs-resize {
+  font-size: 1.25rem;
+  resize: vertical;
+  height: 10rem;
+}
+
+.UserSettings__button-right {
+  width: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+.UserSettings__button-left {
+  width: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--danger-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+.UserSettings__button-left:active {
+  opacity: 0.5;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.UserSettings__button-right:active {
+  opacity: 0.5;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.UserSettings__separator {
+  border: 1px solid var(--primary-color);
+  width: 100%;
+}
+
+.UserSetting__title {
+  text-align: center;
+}

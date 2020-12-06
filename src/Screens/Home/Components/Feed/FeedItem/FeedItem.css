@@ -42,3 +42,7 @@
 .FeedItem__creation {
   margin-bottom: 0;
 }
+
+.FavItem__separator {
+  border-color: var(--primary-color);
+}
