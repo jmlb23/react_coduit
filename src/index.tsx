@@ -15,6 +15,7 @@ import { AppStore } from './State/Store';
 import { Article } from './Screens/Article/Article';
 import { Editor } from './Screens/Editor/Editor';
 import { UserSettings } from './Screens/UserSettings/UserSettings';
+import { Guard } from './Common/Guard';
 
 ReactDOM.render(
   <Provider store={AppStore}>
@@ -26,10 +27,14 @@ ReactDOM.render(
             <Article />
           </Route>
           <Route path="/editor">
-            <Editor />
+            <Guard to="/signin">
+              <Editor />
+            </Guard>
           </Route>
           <Route path="/settings">
-            <UserSettings />
+            <Guard to="/signin">
+              <UserSettings />
+            </Guard>
           </Route>
           <Route path="/profiles/:id/favorites">
             <UserProfile showFavs={true} />

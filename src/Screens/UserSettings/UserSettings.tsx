@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useStore } from "react-redux";
 import { Loader } from "../../Common/Loader/Loader";
 import { apiClient } from "../../data/Api";
 import { isOther } from "../../data/Error";
 import { User, UserUpdate } from "../../data/UserDTOS";
+import { AppActions } from "../../State/ActionCreators";
 import { AppState } from "../../State/Reducers";
 import "./UserSettings.css"
 
@@ -12,6 +13,7 @@ type UserSettingsProps = {
 }
 
 export const UserSettings = (props: UserSettingsProps) => {
+  const store = useStore<AppState, AppActions>();
   const token = useSelector((x: AppState) => x.token)
   const [user, setUser] = useState<User | null>(null)
   const [submit, setSubmit] = useState(false);
@@ -25,15 +27,15 @@ export const UserSettings = (props: UserSettingsProps) => {
       mounted = false;
     })
   }, [token])
-  
+
   useEffect(() => {
     let mounted = true
-    if(submit && token !== null && update !== null)
+    if (submit && token !== null && update !== null)
       apiClient.updateUser(token, update)
     return (() => {
       mounted = false
     })
-  },[submit, token, update])
+  }, [submit, token, update])
 
   return <>
     <h1 className="UserSetting__title" >Your settings</h1>
@@ -49,7 +51,7 @@ export const UserSettings = (props: UserSettingsProps) => {
           </fieldset>
           <button className="UserSettings__button-right" >Update settings</button>
           <hr className="UserSettings__separator" />
-          <button onClick={async () => {setSubmit(true)}} className="UserSettings__button-left" >Click to Logout</button>
+          <button onClick={() => store.dispatch({ type: "REMOVE_TOKEN", payload: "" })} className="UserSettings__button-left" >Click to Logout</button>
         </div>
     }
   </>

@@ -7,6 +7,6 @@ export const persisStateMiddleware: Middleware = (api: MiddlewareAPI<Dispatch<an
   const state = api.getState();
   if (state.token !== null)
     localStorage.setItem("token", state.token)
-  console.log("------ store state ------ ", state.token)
+  if (a.type === "REMOVE_TOKEN") localStorage.removeItem("token")
   return a;
 };
